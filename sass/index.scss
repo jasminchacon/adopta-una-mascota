@@ -1,0 +1,29 @@
+body{
+    font-family: 'Arial';
+}
+$primary-color: #FFDD33;
+
+@mixin button-style($bg-color) {
+    padding: 0.5rem 1rem;
+    background-color: $bg-color;
+    border: none;
+    border-radius: 5px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    text-align: center;
+    padding: 2rem;
+    h1 {
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+    button {
+        @include button-style($primary-color);
+    }
+}
+
+/* sass --watch sass:css */

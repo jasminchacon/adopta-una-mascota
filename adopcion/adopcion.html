@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Perrito Adoptado</title>
+</head>
+<body>
+<!-- Modal -->
+<div class="modal fade" id="adoptModal" tabindex="-1" aria-labelledby="adoptModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="adoptModalLabel">Formulario de Adopción</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formAdopcion" action="enviar_formulario.php" method="POST">
+                    <!-- Nombre Completo -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" id="nombre" class="form-control" name="nombre" required>
+                    </div>
+                    <!-- RUT -->
+                    <div class="mb-3">
+                        <label for="rut" class="form-label">RUT</label>
+                        <input type="text" id="rut" class="form-control" name="rut" required>
+                    </div>
+                    <!-- Ciudad -->
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad</label>
+                        <input type="text" id="ciudad" class="form-control" name="ciudad" required>
+                    </div>
+                    <!-- Botón Enviar -->
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <section class="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center"
+        style="height: 100vh;">
+        <img id="imagenAdoptada" src="" alt="Perrito Adoptado" class="img-fluid rounded mb-4">
+        <h1 class="display-4 fw-bold">¡Perrito Adoptado con Éxito! 🎉</h1>
+        <p class="lead" id="mensajeAdopcion"></p>
+        <a href="index.html">
+            <button class="btn btn-yellow mt-4">Volver a la página principal</button>
+        </a>
+    </section>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

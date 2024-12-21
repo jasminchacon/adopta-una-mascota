@@ -1,0 +1,28 @@
+body {
+  font-family: "Arial";
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+.hero h1 {
+  color: #FFDD33;
+  margin-bottom: 1rem;
+}
+.hero button {
+  padding: 0.5rem 1rem;
+  background-color: #FFDD33;
+  border: none;
+  border-radius: 5px;
+}
+
+/* sass --watch sass:css */
+
+/*# sourceMappingURL=index.css.map */

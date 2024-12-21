@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perrito Adoptado</title>
+    </head>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Adopta un Perrito</title>
+</head>
+
+<body>
+    <header>
+        <div class="logoDePagina">
+            <img src="assets/logoSite.png" alt="">
+        </div>
+        <nav class="navbar">
+            <ul class="navPrincipal">
+                <li class="itemNav">Home</li>
+                <li class="itemNav">Adopta</li>
+                <li class="itemNav">Eventos</li>
+                <li class="itemNav">Voluntario</li>
+                <li class="itemNav">Quienes Somos</li>
+                <li class="itemNav">Contactenos</li>
+            </ul>
+            <div class="buttonGroup">
+                <button class="buttonPrimary">Hazte adoptante</button>
+                <button class="buttonSecondary">Contactenos</button>
+            </div>
+        </nav>
+        <section class="contenedorHero">
+            <img src="assets/frame1.png" alt="imagen de referencia perrito">
+            <div class="textContenedor">
+                <h1 class="tituloHero">Adopta un perrito</h1>
+                <p class="textoHero">Conoce a tu proximo compañero de vida</p>
+            </div>
+        </section>
+        <div class="search-bar">
+            <label for="raza" class="search-label">Selecciona una raza:</label>
+            <select id="raza" class="search-select">
+                <option value="" disabled selected>Seleccionar</option>
+            </select>
+            <button id="btnBuscar" class="search-button">Buscar →</button>
+        </div>
+        <div id="mensajeError" class="mensaje-error">Por favor, selecciona una raza para continuar.</div>
+        <div class="results-container" id="resultadoPerro">
+            <img id="imagenPerro" src="" alt="" class="img-fluid rounded mb-3">
+        </div>
+
+        <div id="resultadoPerro" class="hidden">
+            <a href="adopcion/adopcion.html">
+            <button id="btnAdoptar" class="buttonPrimary">Adoptar</button>
+        </a>
+        </div>
+
+    </header>
+    <footer class="contenedorFooter">
+        <div class="logoPagina">
+            <img src="assets/logoSite.png" alt="">
+            <p>Estamos aquí para ayudar a cada perrito a encontrar un hogar amoroso y seguro.</p>
+            <img src="assets/instagram.png" alt="">
+            <img src="assets/facebook.png" alt="">
+        </div>
+
+        <div class="sitiosFooter">
+            <h4>Home</h4>
+            <li>Adopta</li>
+            <li>Eventos</li>
+            <li>Voluntario</li>
+            <li>Quienes Somos</li>
+            <li>Contactenos</li>
+            </ul>
+        </div>
+        <div class="informateFooter">
+            <h4>Información</h4>
+            <li>Jornadas de adopción</li>
+            <li>Hogares temporales</li>
+            <li>Razas</li>
+        </div>
+        <div class="temasDeInteresFooter">
+            <h4>Donaciones</h4>
+            <li>Únete y conviertete en un padrino</li>
+            <div>
+                <button class="buttonTerciary">Donar</button>
+            </div>
+
+            <div class="creditosFooter">
+                <p>Landing page realizado por Christian Montiel & Jasmin Chacon - Curso Front end 2024</p>
+            </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
