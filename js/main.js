@@ -1,6 +1,5 @@
 const apiUrlBase = 'https://dog.ceo/api';
 
-// Cargar la lista de razas en el select
 fetch(`${apiUrlBase}/breeds/list/all`)
     .then(response => response.json())
     .then(data => {
@@ -16,7 +15,6 @@ fetch(`${apiUrlBase}/breeds/list/all`)
     })
     .catch(error => console.error("Error al cargar razas:", error));
 
-// Validar selección de raza y mostrar imagen del perro
 const btnBuscar = document.getElementById('btnBuscar');
 const mensajeError = document.getElementById('mensajeError');
 const selectRaza = document.getElementById('raza');
@@ -27,30 +25,26 @@ btnBuscar.addEventListener('click', () => {
     const razaSeleccionada = selectRaza.value;
 
     if (!razaSeleccionada || razaSeleccionada === "Selecciona") {
-        mensajeError.classList.remove('hidden'); // Mostrar el mensaje de error
-    } else {
-        mensajeError.classList.add('hidden'); // Ocultar el mensaje de error
+        mensajeError.classList.remove('hidden'); 
+        mensajeError.classList.add('hidden'); 
 
-        // Hacer petición a la API para obtener una imagen de la raza seleccionada
         fetch(`${apiUrlBase}/breed/${razaSeleccionada}/images/random`)
             .then(response => response.json())
             .then(data => {
-                imagenPerro.src = data.message; // Mostrar imagen del perro
-                resultadoPerro.classList.remove('hidden'); // Mostrar el contenedor del perro
-                localStorage.setItem('imagenAdoptada', data.message); // Guardar la imagen para la página de adopción
+                imagenPerro.src = data.message; 
+                resultadoPerro.classList.remove('hidden'); 
+                localStorage.setItem('imagenAdoptada', data.message);
             })
             .catch(error => console.error("Error al obtener la imagen del perro:", error));
     }
 });
 
-// Mostrar modal al presionar "Adoptar"
 const btnAdoptar = document.getElementById('btnAdoptar');
 btnAdoptar.addEventListener('click', () => {
     const modal = new bootstrap.Modal(document.getElementById('adoptModal'));
-    modal.show(); // Mostrar el modal
+    modal.show(); 
 });
 
-// Validar el formulario y redirigir a la página de adopción
 const btnModalAdoptar = document.getElementById('btnModalAdoptar');
 btnModalAdoptar.addEventListener('click', () => {
     const nombre = document.getElementById('nombre').value.trim();
@@ -58,15 +52,14 @@ btnModalAdoptar.addEventListener('click', () => {
     const ciudad = document.getElementById('ciudad').value.trim();
 
     if (!nombre || !rut || !ciudad) {
-        alert("Por favor, completa todos los campos del formulario."); // Validación simple
+        alert("Por favor, completa todos los campos del formulario."); 
     } else {
-        localStorage.setItem('nombreUsuario', nombre); // Guardar datos en localStorage (opcional)
+        localStorage.setItem('nombreUsuario', nombre); 
         localStorage.setItem('ciudadUsuario', ciudad);
-        window.location.href = 'adoptado.html'; // Redirigir a la página de adopción
+        window.location.href = 'adoptado.html'; 
     }
 });
 
- // Mostrar información desde localStorage
  const imagenUrl = localStorage.getItem('imagenAdoptada');
  const nombreUsuario = localStorage.getItem('nombreUsuario');
  const ciudadUsuario = localStorage.getItem('ciudadUsuario');
@@ -85,8 +78,6 @@ btnModalAdoptar.addEventListener('click', () => {
  } else {
      mensajeAdopcion.textContent = "¡Gracias por adoptar!";
  }
-
-
 
 
 
